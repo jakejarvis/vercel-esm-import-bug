@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "env": {
+    "FORCE_RUNTIME_TAG": "canary"
+  },
+  "builds": [
+    {
+      "src": "/index.ts",
+      "use": "@vercel/node@canary"
+    }
+  ],
+  "routes": [
+    {
+      "src": "(.*)",
+      "dest": "/index.ts"
+    }
+  ]
+}
